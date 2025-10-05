@@ -14,20 +14,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: oklch(14.5% 0 0);
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h1 {
@@ -40,19 +36,23 @@ h1 {
 }
 
 .navbar{
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.activelink{
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.activelink::after{
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: oklch(64.6% 0.222 41.116);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 3px;
 }
 
 
@@ -70,3 +70,41 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Hero Section css */
+.buttons button, a, i{
+  transition: all 0.3s ease-in-out;
+}
+.buttons button:hover{
+  color: oklch(98.5% 0.002 247.839);
+  border-color: oklch(98.5% 0.002 247.839);
+  cursor: pointer;
+}
+.buttons a:hover i{
+   color: oklch(98.5% 0.002 247.839);
+}
+
+@media (max-width: 640px) {
+  .hero{
+    padding-top: 25px;
+  }
+  .hero .two_sides{
+    width: 100%;
+    display: block;
+  }
+  .two_sides .side_one , .two_sides .side_two{
+    width: 100%;
+    text-align: center;
+  }
+  .notice{
+    display: block;
+    width: 100%;
+  }
+  .notice div{
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* Hero Section css */
