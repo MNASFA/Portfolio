@@ -3,27 +3,28 @@ import heropic from "../assets/Learning-cuate.svg"
 
 function Hero() {
   return (
-    <div className='hero w-full px-10'>
+    <div className=' block hero w-full px-10'>
       <div className='two_sides max-w-5/6 mx-auto flex items-center justify-between'>
         <div className="side_one w-2/3">
 
-          <h4 className="text-2xl pb-5 tracking-wider ml-1">Full Stack Developer</h4>
+          <h3 className="text-2xl pb-5 tracking-wider ml-1 uppercase">Full Stack Developer</h3>
 
-          <h4 className="text-7xl pb-2 tracking-wider font-bold">Hello I'm</h4>
-          <h4 className="text-7xl pb-4 tracking-wider font-bold text-orange-600">Houssam Mnasfa</h4>
+          <h4 className="text-7xl pb-2 tracking-wider font-bold uppercase">Hello I'm</h4>
+          <h4 className="text-7xl pb-4 tracking-wider font-bold text-orange-600 uppercase">Houssam Mnasfa</h4>
           <p className="text-2xl pb-10 ml-1">
             Full-stack developer and student at 1337 Khouribga, passionate 
             about crafting clean code and building innovative 
             web solutions. With a diploma in software development, 
             I transform ideas into functional, 
-            user-friendly applications.</p>
+            user-friendly applications.
+            </p>
 
           <div className="buttons pb-10 flex items-center">
             <button className="ml-1 border-3 rounded-4xl py-3 px-9 border-orange-600 text-orange-600 uppercase">Download cv <i class="fa-solid fa-download"></i></button>
-            <a href="#" className="w-fit" ><i class=" text-orange-600 ml-6 text-4xl fa-brands fa-github"></i></a>
-            <a href="#" className="w-fit" ><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-linkedin"></i></a>
-            <a href="#" className="w-fit" ><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-discord"></i></a>
-            <a href="#" className="w-fit" ><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-instagram"></i></a>
+            <a href="#" className="w-fit"><i class=" text-orange-600 ml-6 text-4xl fa-brands fa-github"></i></a>
+            <a href="#" className="w-fit"><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-linkedin"></i></a>
+            <a href="#" className="w-fit"><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-discord"></i></a>
+            <a href="#" className="w-fit"><i class=" text-orange-600 ml-3 text-4xl fa-brands fa-instagram"></i></a>
           </div>
         </div>
 

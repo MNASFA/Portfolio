@@ -1,10 +1,50 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-// import About from "./components/About"
+import About from "./components/About"
+import Skills from "./components/Skills"
+import Journey from "./components/Journey"
 // import Projects from "./components/Projects"
-// import Skills from "./components/Skills"
 // import Contact from "./components/Contact"
 // import Footer from "./components/Footer"
+
+import { useEffect, useRef, useState } from 'react';
+
+function ScrollAnimation({ children, className = "" }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting); // Updates both entering AND exiting
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-10'
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
 
 
 
@@ -13,11 +53,23 @@ function App() {
 
   return (
     <div className="text-gray">
-      <Navbar />
-       <Hero />
-      {/* <About />
-      <Projects />
-      <Skills />
+      <ScrollAnimation>
+        <Navbar />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Hero />
+      </ScrollAnimation>
+      <ScrollAnimation>
+         <About />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Skills />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Journey />
+      </ScrollAnimation>
+      
+      {/* <Projects />
       <Contact />
       <Footer /> */}
     </div>
