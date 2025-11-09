@@ -1,5 +1,6 @@
-import Card from "./card"
+
 import SkillsToggle from "./SkillsToggle"
+import Card from "./Card"
 
 function Skills() {
   return (

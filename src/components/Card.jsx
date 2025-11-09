@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Card({title, description, icon, link}) {
   return (
