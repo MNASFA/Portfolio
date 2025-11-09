@@ -14,10 +14,11 @@ function Navbar() {
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex space-x-4 xl:space-x-6">
-          <li><a href="#hero" className="text-2xl xl:text-3xl hover:text-orange-600 text-orange-600 px-2 activelink">Home</a></li>
+          <li><a href="#" className="text-2xl xl:text-3xl hover:text-orange-600 text-orange-600 px-2 activelink">Home</a></li>
           <li><a href="#about" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">About</a></li>
+          <li><a href="#skills" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Skills</a></li>
+          <li><a href="#journey" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Journey</a></li>
           <li><a href="#projects" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Projects</a></li>
-          <li><a href="#contact" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Skills</a></li>
           <li><a href="#contact" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Contact</a></li>
         </ul>
 

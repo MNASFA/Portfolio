@@ -12,7 +12,7 @@ function Card({title, description, icon, link}) {
             {description}
         </p>
         <div className='pl-0 sm:pl-4'>
-            <a href="#" class="font-semibold text-xs sm:text-sm hover:underline flex items-center">
+            <a href="#contact" class="font-semibold text-xs sm:text-sm hover:underline flex items-center">
             Let's Talk
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -8,7 +8,7 @@ import hostel from "../assets/hostel.jpg"
 
 function Projects() {
   return (
-     <div className="max-w-5/6 m-auto pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6">
+     <div id="projects" className="max-w-5/6 m-auto pb-12 pt-8 sm:pb-16 lg:pb-20 px-4 sm:px-6">
         <div className="about_title w-full p-4 sm:p-8 mb-10 sm:mb-16 lg:mb-20 mt-10 sm:mt-16 lg:mt-20">
             <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Projects</h2>
         </div>

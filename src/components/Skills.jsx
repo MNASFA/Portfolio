@@ -4,7 +4,7 @@ import Card from "./Card"
 
 function Skills() {
   return (
-    <div className="max-w-5/6 m-auto pb-3 px-4 sm:px-6">
+    <div id="skills" className="max-w-5/6 m-auto pb-3 px-4 sm:px-6 pt-10">
         <div className="about_title w-full p-4 sm:p-8">
             <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Soft Skills</h2>
         </div>

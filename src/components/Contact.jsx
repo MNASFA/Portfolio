@@ -167,7 +167,7 @@ function Contact() {
                   <div>
                     <h4 className="text-gray-400 text-sm sm:text-base font-medium mb-1">Phone</h4>
                     <a 
-                      href="tel:+212600000000" 
+                      href="https://wa.me/623581831" 
                       className="text-gray-300 hover:text-orange-600 text-base sm:text-lg transition-colors duration-300"
                     >
                       +212 623 581 831

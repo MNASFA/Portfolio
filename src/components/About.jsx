@@ -2,7 +2,7 @@ import about_img from "../assets/about.svg"
 
 function About() {
   return (
-    <div className="block max-w-5/6 m-auto min-h-screen pt-8 sm:pt-12 pb-8 sm:pb-12 px-4 sm:px-6">
+    <div id="about" className="block max-w-5/6 m-auto min-h-screen pt-8 sm:pt-18 pb-8 sm:pb-12 px-4 sm:px-6">
         <div className="about_title w-full p-4 sm:p-8">
             <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">About Me</h2>
         </div>
@@ -26,8 +26,8 @@ function About() {
                     I don't just write code—I craft experiences.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-center lg:justify-start">
-                  <button className="talk bg-orange-600 font-bold rounded-2xl hover:bg-white/87 hover:text-orange-600 py-2 sm:py-3 px-6 sm:px-8 text-sm sm:text-base">Let's talk <i class="fa-solid fa-comments"></i></button>
-                  <button className="cv bg-white/87 font-bold text-orange-600 rounded-2xl hover:bg-orange-600 hover:text-white/87 py-2 sm:py-3 px-6 sm:px-8 text-sm sm:text-base sm:ml-4">Download CV <i class="fa-solid fa-download"></i></button>
+                  <button className="talk bg-orange-600 font-bold rounded-2xl hover:bg-white/87 hover:text-orange-600 py-2 sm:py-3 px-6 sm:px-8 text-sm sm:text-base" onClick={() => window.location.href = "#contact"} >Let's talk <i class="fa-solid fa-comments"></i></button>
+                  <button className="cv bg-white/87 font-bold text-orange-600 rounded-2xl hover:bg-orange-600 hover:text-white/87 py-2 sm:py-3 px-6 sm:px-8 text-sm sm:text-base sm:ml-4" onClick={() => window.open('https://drive.google.com/file/d/1wSslh_4Y7JxzS4nQx6Y_IRl5OoYOr4Jo/view?usp=sharing', '_blank')} >Download CV <i class="fa-solid fa-download"></i></button>
                 </div>
             </div>
         </div>

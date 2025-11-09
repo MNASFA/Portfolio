@@ -53,7 +53,7 @@ function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#hero" 
+                  href="#" 
                   className="text-gray-400 hover:text-orange-600 text-sm sm:text-xl transition-colors duration-300 inline-flex items-center group"
                 >
                   <i className="fa-solid fa-chevron-right text-xs mr-2 text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
@@ -106,7 +106,7 @@ function Footer() {
               <li className="flex items-center justify-center md:justify-start">
                 <i className="fa-solid fa-phone text-orange-600 mr-3 text-sm"></i>
                 <a 
-                  href="tel:+212600000000" 
+                  href="https://wa.me/623581831" 
                   className="text-gray-400 hover:text-orange-600 text-sm sm:text-xl transition-colors duration-300"
                 >
                   +212 623 581 831
