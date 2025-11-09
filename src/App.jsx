@@ -4,8 +4,8 @@ import About from "./components/About"
 import Skills from "./components/Skills"
 import Journey from "./components/Journey"
 import Projects from "./components/Projects"
-// import Contact from "./components/Contact"
-// import Footer from "./components/Footer"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -71,7 +71,12 @@ function App() {
       <ScrollAnimation>
         <Projects />
       </ScrollAnimation>
-      
+      <ScrollAnimation>
+        <Contact />
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <Footer />
+      </ScrollAnimation>
     </div>
   )
 }

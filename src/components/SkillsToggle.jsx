@@ -53,11 +53,11 @@ export default function SkillsToggle() {
   const currentData = activeTab === 'skills' ? skills : tools;
 
   return (
-    <div className='flex justify-between gap-8'>
+    <div className='flex flex-col lg:flex-row justify-between gap-8 lg:gap-8'>
       {/* Left Side */}
-      <div className="left_side lg:w-1/2">
+      <div className="left_side w-full lg:w-1/2 text-center lg:text-left">
         <div>
-          <h2 className='text-3xl lg:text-5xl leading-tight font-bold'>
+          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold'>
             These are My
             <br />
             Programming skills and 
@@ -67,8 +67,8 @@ export default function SkillsToggle() {
             Using.
           </h2>
 
-         <div className='flex items-center pt-10 pb-10'>
-            <strong className='mr-3 font-light text-xl'>Toggle the button</strong> 
+         <div className='flex items-center justify-center lg:justify-start pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-10'>
+            <strong className='mr-3 font-light text-base sm:text-lg lg:text-xl'>Toggle the button</strong> 
             <svg 
                 fill="#FF6B35" 
                 height="20px" 
@@ -85,10 +85,10 @@ export default function SkillsToggle() {
         </div>
 
         {/* Toggle Buttons */}
-        <div className="mb-12 h-fit w-fit border-2 border-orange-600 rounded-lg">
+        <div className="mb-8 sm:mb-10 lg:mb-12 h-fit w-fit mx-auto lg:mx-0 border-2 border-orange-600 rounded-lg">
           <button
             onClick={() => setActiveTab('skills')}
-            className={`cursor-pointer px-8 py-3 font-semibold transition-all duration-300 ${
+            className={`cursor-pointer px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'skills'
                 ? 'bg-orange-600 text-white'
                 : 'text-white hover:text-orange-600'
@@ -98,7 +98,7 @@ export default function SkillsToggle() {
           </button>
           <button
             onClick={() => setActiveTab('tools')}
-            className={`cursor-pointer px-8 py-3  font-semibold transition-all duration-300 ${
+            className={`cursor-pointer px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold transition-all duration-300 ${
               activeTab === 'tools'
                 ? 'bg-orange-600 text-white'
                 : 'text-white hover:text-orange-600'
@@ -110,8 +110,8 @@ export default function SkillsToggle() {
       </div>
 
       {/* Right Side - Cards Grid with Staggered Animation */}
-      <div className="right_side lg:w-1/2">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div className="right_side w-full lg:w-1/2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4">
           {currentData.map((item, index) => (
             <div
               key={`${activeTab}-${index}`}

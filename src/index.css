@@ -73,69 +73,59 @@ button:focus-visible {
    color: oklch(98.5% 0.002 247.839);
 }
 
+/* Responsive Design - Mobile First Approach */
+
+/* Extra Small Devices (phones, 320px and up) */
 @media (max-width: 640px) {
   .navbar{
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
-  .hero .two_sides{
-    width: 100%;
-    display: block;
+  
+  /* Ensure proper spacing on mobile */
+  .about_title h2 {
+    font-size: 2rem;
+    padding: 8px;
   }
-  .two_sides .side_one , .two_sides .side_two{
-    width: 100%;
-    text-align: center;
-  }
-  .side_one h3{
-    font-size: 25px;
-  }
-  .side_one h4{
-    font-size: 55px;
-  }
-  .side_one p{
-    font-size: 25px;
-  }
-  .side_one .buttons{
-    display: block;
-    width: 100%;
-  }
-  .side_one .buttons button{
-    width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-  .notice{
-    display: none;
+  
+  .about_container .content button {
+    padding: 10px 40px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-right: 8px;
   }
 }
 
-@media (max-width: 1024px) {
+/* Small Devices (tablets, 640px and up) */
+@media (min-width: 640px) and (max-width: 768px) {
+  .navbar{
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .navbar{
     padding-top: 30px;
   }
-  .hero{
+  
+  .about_container .content button {
+    padding: 12px 50px;
     font-size: 20px;
-    padding-top: 40px;
   }
-  .hero .two_sides{
-    width: 100%;
-    display: block;
+}
+
+/* Large Devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .navbar{
+    padding-top: 30px;
   }
-  .two_sides .side_one , .two_sides .side_two{
-    width: 100%;
-    text-align: center;
-  }
-  .side_one .buttons{
-    width: fit-content;
-    margin: auto;
-  }
-  /* .side_one .buttons button{
-    width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  } */
+}
+
+/* Extra Large Devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {
+  /* Additional styles for very large screens if needed */
 }
 
 /* Hero Section css */
