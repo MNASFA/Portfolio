@@ -17,28 +17,28 @@ function Footer() {
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               <a 
-                href="#" 
+                href="https://github.com/MNASFA" 
                 className="w-10 h-10 bg-orange-600/20 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="GitHub"
               >
                 <i className="fa-brands fa-github text-orange-600 group-hover:text-white transition-colors duration-300"></i>
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/houssam-mnasfa-80056b247/" 
                 className="w-10 h-10 bg-orange-600/20 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="LinkedIn"
               >
                 <i className="fa-brands fa-linkedin text-orange-600 group-hover:text-white transition-colors duration-300"></i>
               </a>
               <a 
-                href="#" 
+                href="https://discord.com/users/1087333504775376896" 
                 className="w-10 h-10 bg-orange-600/20 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="Discord"
               >
                 <i className="fa-brands fa-discord text-orange-600 group-hover:text-white transition-colors duration-300"></i>
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/houssa_mn/" 
                 className="w-10 h-10 bg-orange-600/20 hover:bg-orange-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                 aria-label="Instagram"
               >
@@ -53,7 +53,7 @@ function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#" 
+                  href="#hero" 
                   className="text-gray-400 hover:text-orange-600 text-sm sm:text-xl transition-colors duration-300 inline-flex items-center group"
                 >
                   <i className="fa-solid fa-chevron-right text-xs mr-2 text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>

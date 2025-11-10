@@ -21,10 +21,10 @@ function Hero() {
           <div className="buttons pb-6 sm:pb-8 lg:pb-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-0">
             <button className="w-full sm:w-auto ml-0 lg:ml-1 border-3 rounded-4xl py-2 sm:py-3 px-6 sm:px-9 border-orange-600 text-orange-600 text-sm sm:text-base uppercase" onClick={() => window.open('https://drive.google.com/file/d/1wSslh_4Y7JxzS4nQx6Y_IRl5OoYOr4Jo/view?usp=sharing', '_blank')} >Download cv <i class="fa-solid fa-download"></i></button>
             <div className="flex items-center gap-3 sm:gap-4">
-              <a href="https://github.com/MNASFA" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-6 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/houssam-mnasfa-80056b247/" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-linkedin"></i></a>
-              <a href="https://discord.com/users/1087333504775376896" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-discord"></i></a>
-              <a href="https://www.instagram.com/houssa_mn" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-instagram"></i></a>
+              <a target="_blank" href="https://github.com/MNASFA" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-6 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-github"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/houssam-mnasfa-80056b247/" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-linkedin"></i></a>
+              <a target="_blank" href="https://discord.com/users/1087333504775376896" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-discord"></i></a>
+              <a target="_blank" href="https://www.instagram.com/houssa_mn" className="w-fit"><i class=" text-orange-600 ml-0 sm:ml-3 text-2xl sm:text-3xl lg:text-4xl fa-brands fa-instagram"></i></a>
             </div>
           </div>
         </div>

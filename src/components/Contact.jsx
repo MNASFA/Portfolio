@@ -34,7 +34,7 @@ function Contact() {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="about_title w-full p-4 sm:p-8 mb-8 sm:mb-12">
-          <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest mb-4">
+          <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest mb-4">
             Contact Me
           </h2>
           <p className="text-gray-400 text-center text-base sm:text-lg md:text-xl mt-6">
@@ -151,7 +151,7 @@ function Contact() {
                   <div>
                     <h4 className="text-gray-400 text-sm sm:text-base font-medium mb-1">Email</h4>
                     <a 
-                      href="mailto:hmnasfa@example.com" 
+                      href="mailto:houssammnasfa2@gmail.com" 
                       className="text-gray-300 hover:text-orange-600 text-base sm:text-lg transition-colors duration-300"
                     >
                       houssammnasfa2@gmail.com
@@ -193,28 +193,28 @@ function Contact() {
                   <h4 className="text-gray-400 text-sm sm:text-base font-medium mb-4">Follow me</h4>
                   <div className="flex gap-4">
                     <a 
-                      href="#" 
+                      href="https://github.com/MNASFA" 
                       className="w-12 h-12 bg-orange-600/20 hover:bg-orange-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                       aria-label="GitHub"
                     >
                       <i className="fa-brands fa-github text-orange-600 group-hover:text-white text-xl transition-colors duration-300"></i>
                     </a>
                     <a 
-                      href="#" 
+                      href="https://www.linkedin.com/in/houssam-mnasfa-80056b247/" 
                       className="w-12 h-12 bg-orange-600/20 hover:bg-orange-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                       aria-label="LinkedIn"
                     >
                       <i className="fa-brands fa-linkedin text-orange-600 group-hover:text-white text-xl transition-colors duration-300"></i>
                     </a>
                     <a 
-                      href="#" 
+                      href="https://discord.com/users/1087333504775376896" 
                       className="w-12 h-12 bg-orange-600/20 hover:bg-orange-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                       aria-label="Discord"
                     >
                       <i className="fa-brands fa-discord text-orange-600 group-hover:text-white text-xl transition-colors duration-300"></i>
                     </a>
                     <a 
-                      href="#" 
+                      href="https://www.instagram.com/houssa_mn/" 
                       className="w-12 h-12 bg-orange-600/20 hover:bg-orange-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group"
                       aria-label="Instagram"
                     >

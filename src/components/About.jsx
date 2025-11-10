@@ -4,7 +4,7 @@ function About() {
   return (
     <div id="about" className="block max-w-5/6 m-auto min-h-screen pt-8 sm:pt-18 pb-8 sm:pb-12 px-4 sm:px-6">
         <div className="about_title w-full p-4 sm:p-8">
-            <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">About Me</h2>
+            <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">About Me</h2>
         </div>
         <div className="about_container flex flex-col lg:flex-row items-center justify-around w-full pt-8 sm:pt-12 md:pt-16 lg:pt-20 gap-8 lg:gap-0">
              <div className="image flex items-center justify-center w-full lg:w-1/2 pb-4 lg:pb-8 order-2 lg:order-1">

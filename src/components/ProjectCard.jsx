@@ -20,7 +20,7 @@ function ProjectCard({url, title, des,link , flag1, flag2, flag3, demoUrl, readm
             {/* Buttons */}
             <div className="px-4 sm:px-6 pb-4 sm:pb-6 flex gap-3 sm:gap-4">
                 <a 
-                    href={demoUrl || "#"} 
+                    href={demoUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 bg-orange-600 hover:bg-transparent text-gray-300 font-semibold py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg text-sm sm:text-base transition-all duration-300 hover:scale-105 text-center"
@@ -29,7 +29,7 @@ function ProjectCard({url, title, des,link , flag1, flag2, flag3, demoUrl, readm
                     {link}
                 </a>
                 <a 
-                    href={readmeUrl || "#"} 
+                    href={readmeUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 bg-transparent text-gray-300 hover:bg-orange-600 font-semibold py-2 sm:py-2.5 px-4 sm:px-6 rounded-lg text-sm sm:text-base transition-all duration-300 hover:scale-105 text-center"

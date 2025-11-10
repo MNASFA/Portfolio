@@ -6,7 +6,7 @@ function Skills() {
   return (
     <div id="skills" className="max-w-5/6 m-auto pb-3 px-4 sm:px-6 pt-10">
         <div className="about_title w-full p-4 sm:p-8">
-            <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Soft Skills</h2>
+            <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Soft Skills</h2>
         </div>
         <div className="about_container w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
              <Card
@@ -48,7 +48,7 @@ function Skills() {
 
         {/* technical skills */}
         <div className="about_title w-full p-4 sm:p-8 pt-8 sm:pt-12 lg:pt-15">
-            <h2 className="w-fit m-auto text-3xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Technical Skills</h2>
+            <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Technical Skills</h2>
         </div>
 
         <div className="pb-12 sm:pb-16 lg:pb-20 pt-12 sm:pt-16 lg:pt-20 max-w-7xl mx-auto px-4 sm:px-6">
