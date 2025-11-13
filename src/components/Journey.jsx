@@ -74,7 +74,7 @@ export default function MyJourney() {
   };
 
   return (
-    <section id='journey' className="min-h-screen py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+    <section id='journey' className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="about_title w-full p-4 sm:p-8 mb-8 sm:mb-12">
             <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest mb-4">
