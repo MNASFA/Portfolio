@@ -30,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+    <section id="contact" className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="about_title w-full p-4 sm:p-8 mb-8 sm:mb-12">
