@@ -6,6 +6,7 @@ import Journey from "./components/Journey"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import ScrollToTop from "react-scroll-to-top"
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -77,6 +78,8 @@ function App() {
       <ScrollAnimation>
         <Footer />
       </ScrollAnimation>
+
+      <ScrollToTop smooth className="scroll_top" color="#ffffff" />
     </div>
   )
 }

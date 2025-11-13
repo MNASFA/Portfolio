@@ -12,9 +12,9 @@ function Projects() {
         <div className="about_title w-full p-4 sm:p-8 mb-10 sm:mb-16 lg:mb-20 mt-10 sm:mt-16 lg:mt-20">
             <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest">Projects</h2>
         </div>
-        <div className="about_container w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12 lg:gap-16 xl:gap-20">
+        <div className="about_container w-full grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-12 lg:gap-16 xl:gap-20">
              <ProjectCard title="Cub3d" link="Repo" url={cub3d} flag1="#C" flag2="#RayCasting" flag3="#MinilibX"
-               readmeUrl="https://github.com/MNASFA/cub3d_workspace?tab=readme-ov-file#readme"
+               readmeUrl="https://github.com/MNASFA/cub3d_workspace/blob/master/README.md"
                demoUrl="https://github.com/MNASFA/cub3d_workspace"
                des="Working on cub3D taught me invaluable lessons about graphics programming, from understanding ray-casting 
                 algorithms and texture mapping to implementing efficient rendering pipelines and handling real-time user 
@@ -29,21 +29,21 @@ function Projects() {
                    distribution."
              />
              <ProjectCard title="Net Practice" link="Repo" url={net} flag1="#IP Adress" flag2="#OSI Model" flag3="#Subnetting"
-               readmeUrl=""
-               demoUrl=""
+               readmeUrl="https://github.com/MNASFA/NetPractice/blob/main/README.md"
+               demoUrl="https://github.com/MNASFA/NetPractice"
                 des="A hands-on networking project focused on configuring and troubleshooting complex multi-subnet network 
                 topologies with proper routing protocols to ensure bidirectional communication between hosts, routers, 
                 and the Internet."
              />
              <ProjectCard title="Anajah Academy" link="Demo" url={anajah} flag1="#HTML" flag2="#CSS" flag3="#JS"
                demoUrl="https://anajah-academy-2024.vercel.app/"
-               readmeUrl=""
+               readmeUrl="https://github.com/MNASFA/AnajahAcademy_2024/blob/main/README.md"
                 des="Anajah Academy: My debut freelance project, a dynamic landing page crafted with HTML, CSS, JS, 
                 and PHP, showcasing my skills in web development."
              />
              <ProjectCard title="Rumble Cars" link="Demo" url={rumble} flag1="#React.js" flag2="#CSS" flag3="#BootsTrap"
                demoUrl="https://mnasfa.github.io/rumble-convertproject/"
-               readmeUrl=""
+               readmeUrl="https://github.com/MNASFA/rumble-convertproject/blob/main/README.md"
                 des="Rumble: My multifaceted project from the first internship, featuring multiple React.js and 
                 Bootstrap-powered pages, highlighting adeptness in dynamic web development."
              />

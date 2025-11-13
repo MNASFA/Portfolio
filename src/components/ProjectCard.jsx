@@ -7,7 +7,7 @@ function ProjectCard({url, title, des,link , flag1, flag2, flag3, demoUrl, readm
             <img src={url} alt={title} className='w-full h-auto object-cover text-gray-300' />
             <div className="px-4 sm:px-6 py-3 sm:py-4">
                 <div className="font-bold text-lg sm:text-2xl mb-2 text-gray transition-colors duration-300">{title}</div>
-                <p className="text-sm sm:text-base text-gray-100">
+                <p className="text-base text-gray-100">
                   {des}
                 </p>
             </div>

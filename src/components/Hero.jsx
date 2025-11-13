@@ -3,7 +3,7 @@ import heropic from "../assets/Learning-cuate.svg"
 
 function Hero() {
   return (
-    <div className=' block hero w-full px-4 sm:px-6 md:px-8 lg:px-10'>
+    <div className='my-8 block hero w-full px-4 sm:px-6 md:px-8 lg:px-10'>
       <div className='two_sides max-w-5/6 mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0'>
         <div className="side_one w-full lg:w-2/3 text-center lg:text-left">
 
