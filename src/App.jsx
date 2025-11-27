@@ -7,6 +7,8 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import ScrollToTop from "react-scroll-to-top"
+import { Routes, Route } from "react-router-dom"
+import Success from "./components/Success"
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -47,38 +49,46 @@ function ScrollAnimation({ children, className = "" }) {
   );
 }
 
-
+function MainContent() {
+    return (
+        <>
+            <ScrollAnimation><Hero /></ScrollAnimation>
+            <ScrollAnimation><About /></ScrollAnimation>
+            <ScrollAnimation><Skills /></ScrollAnimation>
+            <ScrollAnimation><Journey /></ScrollAnimation>
+            <ScrollAnimation><Projects /></ScrollAnimation>
+            <ScrollAnimation><Contact /></ScrollAnimation>
+            {/* The Contact component now handles the /success redirect */}
+        </>
+    )
+}
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <div className="text-gray">
+      {/* 1. Navbar is outside Routes so it always shows */}
       <ScrollAnimation>
         <Navbar />
       </ScrollAnimation>
-      <ScrollAnimation>
-        <Hero />
-      </ScrollAnimation>
-      <ScrollAnimation>
-         <About />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Skills />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Journey />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Projects />
-      </ScrollAnimation>
-      <ScrollAnimation>
-        <Contact />
-      </ScrollAnimation>
+
+      {/* 2. Routes define page content based on URL */}
+      <Routes>
+        {/* Route for the main portfolio (path is '/') */}
+        <Route path="/" element={<MainContent />} />
+        
+        {/* 👈 Route for the success page (path is '/success') */}
+        <Route path="/success" element={<Success />} />
+
+        {/* Optional: Add a 404 handler here */}
+        <Route path="*" element={<h2>404 Page Not Found</h2>} /> 
+      </Routes>
+
+      {/* 3. Footer and ScrollToTop are outside Routes so they always show */}
       <ScrollAnimation>
         <Footer />
       </ScrollAnimation>
-
       <ScrollToTop smooth className="scroll_top" color="#ffffff" />
     </div>
   )
