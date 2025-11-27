@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // 👈 CRITICAL: Import the hook for redirection
 
 function Contact() {
+  const navigate = useNavigate(); // 👈 Initialize the hook
+
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
     phone: '',
     message: ''
   });
-  // State to handle and display submission feedback to the user
-  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' | 'error' | null
+  // The submissionStatus state is now only used for error display, as success triggers navigation
+  const [submissionStatus, setSubmissionStatus] = useState(null); // 'error' | null
 
   const handleChange = (e) => {
     setFormData({
@@ -18,28 +21,29 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default HTML form submission (page refresh)
-    
-    setSubmissionStatus(null); // Clear previous status
+    e.preventDefault(); 
+    setSubmissionStatus(null); 
 
     const form = e.target;
     const data = new FormData(form);
-
-    // Netlify requires data in URL-encoded format for client-side submissions
     const encodedData = new URLSearchParams(data).toString();
 
     fetch("/", {
       method: "POST",
-      // CRITICAL: Must include this header for Netlify to process the data
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodedData
     })
     .then((response) => {
       if (response.status === 200 || response.ok) {
-        setSubmissionStatus('success');
-        // Reset form fields on successful submission
+        
+        // 🚀 SUCCESS ACTION: REDIRECT TO THE SUCCESS PAGE
+        navigate('/success'); // 👈 This redirects the user!
+
+        // Note: Resetting the form data is optional here since the page changes
         setFormData({ fullname: '', email: '', phone: '', message: '' }); 
+        
       } else {
+        // ERROR HANDLING
         setSubmissionStatus('error');
       }
     })
@@ -63,7 +67,7 @@ function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Form */}
           <div className="order-2 lg:order-1">
             <div className="rounded-2xl p-6 sm:p-8 ">
@@ -73,10 +77,10 @@ function Contact() {
               
               {/* === NETLIFY FORM CONFIGURATION === */}
               <form 
-                name="contact" // 👈 CRITICAL: Tells Netlify to recognize this form
-                method="POST" // 👈 REQUIRED: Specifies the method
-                data-netlify="true" // 👈 CRITICAL: Activates the Netlify Forms feature
-                data-netlify-honeypot="bot-field" // 👈 RECOMMENDED: Spam protection
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field" 
                 onSubmit={handleSubmit} 
                 className="space-y-5 sm:space-y-6"
               >
@@ -92,7 +96,7 @@ function Contact() {
                   <input
                     type="text"
                     id="fullname"
-                    name="fullname" // 👈 Netlify captures this field name
+                    name="fullname" 
                     value={formData.fullname}
                     onChange={handleChange}
                     required
@@ -109,7 +113,7 @@ function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="email" // 👈 Netlify captures this field name
+                    name="email" 
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -126,7 +130,7 @@ function Contact() {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone" // 👈 Netlify captures this field name
+                    name="phone" 
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full bg-neutral-800 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-2 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 transition-all duration-300"
@@ -141,7 +145,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    name="message" // 👈 Netlify captures this field name
+                    name="message" 
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -151,12 +155,7 @@ function Contact() {
                   ></textarea>
                 </div>
                 
-                {/* Submission Status Message */}
-                {submissionStatus === 'success' && (
-                  <p className="text-green-500 font-semibold mt-4">
-                    ✅ Success! Your message has been sent.
-                  </p>
-                )}
+                {/* Submission Status Message (Only displays error now) */}
                 {submissionStatus === 'error' && (
                   <p className="text-red-500 font-semibold mt-4">
                     ❌ Submission failed. Please try again.
