@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -7,6 +7,8 @@ function Contact() {
     phone: '',
     message: ''
   });
+  // State to handle and display submission feedback to the user
+  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' | 'error' | null
 
   const handleChange = (e) => {
     setFormData({
@@ -16,23 +18,42 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      fullname: '',
-      email: '',
-      phone: '',
-      message: ''
+    e.preventDefault(); // Prevents the default HTML form submission (page refresh)
+    
+    setSubmissionStatus(null); // Clear previous status
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    // Netlify requires data in URL-encoded format for client-side submissions
+    const encodedData = new URLSearchParams(data).toString();
+
+    fetch("/", {
+      method: "POST",
+      // CRITICAL: Must include this header for Netlify to process the data
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodedData
+    })
+    .then((response) => {
+      if (response.status === 200 || response.ok) {
+        setSubmissionStatus('success');
+        // Reset form fields on successful submission
+        setFormData({ fullname: '', email: '', phone: '', message: '' }); 
+      } else {
+        setSubmissionStatus('error');
+      }
+    })
+    .catch((error) => {
+      console.error('Submission error:', error);
+      setSubmissionStatus('error');
     });
-    alert('Thank you for your message! I will get back to you soon.');
   };
 
   return (
     <section id="contact" className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
+        
+        {/* Title Section */}
         <div className="about_title w-full p-4 sm:p-8 mb-8 sm:mb-12">
           <h2 className="w-fit m-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray tracking-widest mb-4">
             Contact Me
@@ -50,7 +71,19 @@ function Contact() {
                 Send me a message <span className='text-orange-600 font-bold'>:</span>
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              {/* === NETLIFY FORM CONFIGURATION === */}
+              <form 
+                name="contact" // 👈 CRITICAL: Tells Netlify to recognize this form
+                method="POST" // 👈 REQUIRED: Specifies the method
+                data-netlify="true" // 👈 CRITICAL: Activates the Netlify Forms feature
+                data-netlify-honeypot="bot-field" // 👈 RECOMMENDED: Spam protection
+                onSubmit={handleSubmit} 
+                className="space-y-5 sm:space-y-6"
+              >
+                {/* HIDDEN FIELDS REQUIRED BY NETLIFY */}
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+              
                 {/* Full Name */}
                 <div>
                   <label htmlFor="fullname" className="block text-gray-300 text-sm sm:text-base font-medium mb-2">
@@ -59,7 +92,7 @@ function Contact() {
                   <input
                     type="text"
                     id="fullname"
-                    name="fullname"
+                    name="fullname" // 👈 Netlify captures this field name
                     value={formData.fullname}
                     onChange={handleChange}
                     required
@@ -76,7 +109,7 @@ function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="email" // 👈 Netlify captures this field name
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -93,7 +126,7 @@ function Contact() {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="phone" // 👈 Netlify captures this field name
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full bg-neutral-800 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-2 focus:border-orange-600 focus:ring-2 focus:ring-orange-600/20 transition-all duration-300"
@@ -108,7 +141,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="message" // 👈 Netlify captures this field name
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -117,6 +150,18 @@ function Contact() {
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
+                
+                {/* Submission Status Message */}
+                {submissionStatus === 'success' && (
+                  <p className="text-green-500 font-semibold mt-4">
+                    ✅ Success! Your message has been sent.
+                  </p>
+                )}
+                {submissionStatus === 'error' && (
+                  <p className="text-red-500 font-semibold mt-4">
+                    ❌ Submission failed. Please try again.
+                  </p>
+                )}
 
                 {/* Submit Button */}
                 <button
@@ -130,7 +175,7 @@ function Contact() {
             </div>
           </div>
 
-          {/* Contact Details */}
+          {/* Contact Details (Unchanged) */}
           <div className="order-1 lg:order-2">
             <div className="bg-gradient-to-br rounded-2xl p-6 sm:p-8 h-full">
               <h3 className="text-2xl sm:text-3xl font-bold text-gray mb-6">
@@ -232,4 +277,3 @@ function Contact() {
 }
 
 export default Contact
-
