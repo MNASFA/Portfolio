@@ -10,16 +10,16 @@ function Navbar() {
     <nav className="block w-full navbar text-gray pt-6 pb-6">
       <div className="max-w-5/6 mx-auto px-4 sm:px-6 flex justify-between items-center">
         {/* Logo / Name */}
-        <h4 className="logo text-4xl sm:text-6xl md:text-7xl lg:text-8xl">Hm<span className='font-bold text-orange-600'>.</span></h4>
+        <h4 className="logo text-4xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-[10rem]">Hm<span className='font-bold text-orange-600'>.</span></h4>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex space-x-4 xl:space-x-6">
-          <li><a href="#hero" className="text-2xl xl:text-3xl hover:text-orange-600 text-orange-600 px-2 activelink">Home</a></li>
-          <li><a href="#about" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">About</a></li>
-          <li><a href="#skills" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Skills</a></li>
-          <li><a href="#journey" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Journey</a></li>
-          <li><a href="#projects" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Projects</a></li>
-          <li><a href="#contact" className="text-2xl xl:text-3xl hover:text-orange-600 px-3">Contact</a></li>
+          <li><a href="#hero" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 text-orange-600 px-2 activelink">Home</a></li>
+          <li><a href="#about" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 px-3">About</a></li>
+          <li><a href="#skills" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 px-3">Skills</a></li>
+          <li><a href="#journey" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 px-3">Journey</a></li>
+          <li><a href="#projects" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 px-3">Projects</a></li>
+          <li><a href="#contact" className="text-2xl xl:text-3xl 2xl:text-5xl hover:text-orange-600 px-3">Contact</a></li>
         </ul>
 
         <div className='flex items-center'>
@@ -37,7 +37,7 @@ function Navbar() {
             <img 
               src={profilepic}
               alt="Profile" 
-              className="h-12 w-12 md:h-14 md:w-14 lg:h-15 lg:w-15 rounded-full object-cover"
+              className="h-12 w-12 md:h-14 md:w-14 lg:h-15 lg:w-15 2xl:h-25 2xl:w-25 rounded-full object-cover"
             />
           </div>
         </div>

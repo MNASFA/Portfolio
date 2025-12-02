@@ -119,7 +119,7 @@ button:focus-visible {
 /* Large Devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   .navbar{
-    padding-top: 30px;
+    padding-top: 70px;
   }
 }
 
