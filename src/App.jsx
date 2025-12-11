@@ -58,7 +58,6 @@ function MainContent() {
             <ScrollAnimation><Journey /></ScrollAnimation>
             <ScrollAnimation><Projects /></ScrollAnimation>
             <ScrollAnimation><Contact /></ScrollAnimation>
-            {/* The Contact component now handles the /success redirect */}
         </>
     )
 }
@@ -69,24 +68,17 @@ function App() {
 
   return (
     <div className="text-gray">
-      {/* 1. Navbar shown on every page except success */}
       {!hideLayout && (
         <ScrollAnimation>
           <Navbar />
         </ScrollAnimation>
       )}
 
-      {/* 2. Routes define page content based on URL */}
       <Routes>
-        {/* Route for the main portfolio (path is '/') */}
         <Route path="/" element={<MainContent />} />
-        
-        {/* 👈 Route for the success page (path is '/success') */}
         <Route path="/success" element={<Success />} />
-
       </Routes>
-
-      {/* 3. Footer and ScrollToTop hidden on success */}
+      
       {!hideLayout && (
         <ScrollAnimation>
           <Footer />
