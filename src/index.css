@@ -88,11 +88,9 @@ button:focus-visible {
     padding: 8px;
   }
   
-  .about_container .content button {
-    padding: 10px 40px;
-    font-size: 18px;
-    margin-top: 15px;
-    margin-right: 8px;
+  .about_container .content button{
+    padding: 15px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -111,7 +109,6 @@ button:focus-visible {
   }
   
   .about_container .content button {
-    padding: 12px 50px;
     font-size: 20px;
   }
 }
@@ -119,7 +116,7 @@ button:focus-visible {
 /* Large Devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   .navbar{
-    padding-top: 30px;
+    padding-top: 40px;
   }
 }
 

@@ -30,11 +30,11 @@ function Hero() {
         </div>
 
         <div className="side_two w-full lg:w-3/5 flex justify-center">
-            <img src={heropic} alt="hero pic" className="w-full max-w-md lg:max-w-none"/>
+            <img src={heropic} alt="hero pic" className="w-[90%] max-w-md lg:max-w-none"/>
         </div>
       </div>
 
-      <div className="notice max-w-5/6 mx-auto w-full hidden lg:flex items-center justify-between">
+      <div className="notice max-w-5/6 mx-auto w-full hidden lg:flex items-center justify-between pt-1.5">
         <div className="flex items-center mr-3">
           <h4 className="text-6xl xl:text-8xl text-orange-600 mr-3">+8</h4>
           <strong className="text-xl xl:text-2xl">Hours of coding<br />per day</strong>
